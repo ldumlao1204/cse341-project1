@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/ldumlao1204/cse341-project1#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.6.0"
   }
 }
