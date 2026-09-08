@@ -1,17 +1,12 @@
+const express = require('express');
 const router = require('express').Router();
+
+const contactsController = require('../controllers/contacts');
+
 const mongodb = require('../db/database');
 
-router.get('/', async (req, res) => {
-    try {
-        const database = mongodb.getDatabase();
-        const contacts = await database.collection('contacts').find().toArray();
+router.get('/', contactsController.getAll);
 
-        res.status(200).json(contacts);
-    } catch (error) {
-        res.status(500).json({
-            error: 'An error occurred while retrieving contacts.'
-        });
-    }
-});
+router.get('/:id', contactsController.getSingle);
 
 module.exports = router;
