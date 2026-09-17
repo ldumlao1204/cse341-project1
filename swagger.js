@@ -6,10 +6,11 @@ const doc = {
         description: 'Contacts API'
     },
     host: 'localhost:3000',
-    schemes: ['https', 'http']
+    schemes: ['https']
 };
 
 const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/index.js']; // Path to the API routes
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
+node
