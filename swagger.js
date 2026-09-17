@@ -5,7 +5,7 @@ const doc = {
         title: 'Contacts API',
         description: 'Contacts API'
     },
-    host: 'localhost:3001',
+    host: 'localhost:3000',
     schemes: ['https', 'http']
 };
 
